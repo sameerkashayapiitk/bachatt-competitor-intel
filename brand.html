@@ -201,6 +201,16 @@ footer{padding:48px 0 80px;color:var(--mut);font-family:'JetBrains Mono',monospa
 .gthumb .play{position:absolute;inset:0;display:grid;place-items:center;opacity:0;transition:.2s;background:rgba(20,30,80,.30)}
 .gcard:hover .gthumb .play{opacity:1}
 .gthumb .play span{width:42px;height:42px;border-radius:50%;background:var(--coral);color:#fff;display:grid;place-items:center;font-size:16px}
+.viewtog{display:inline-flex;border:1px solid var(--line);border-radius:999px;overflow:hidden}
+.viewtog button{font-family:'JetBrains Mono',monospace;font-size:11.5px;padding:6px 12px;background:var(--card);color:var(--mut);border:none;cursor:pointer;transition:.15s}
+.viewtog button.on{background:var(--teal);color:#fff}
+.ggrid.listview{grid-template-columns:1fr;gap:8px}
+.ggrid.listview .gcard{flex-direction:row;align-items:center;contain-intrinsic-size:auto 96px}
+.ggrid.listview .gthumb{width:84px;height:84px;flex:none;aspect-ratio:auto;border-bottom:none;border-right:1px solid var(--line)}
+.ggrid.listview .gbody{padding:10px 14px;gap:5px;justify-content:center}
+.ggrid.listview .gbody .gmsg{display:none}
+.ggrid.listview .glabs{margin-top:4px}
+@media(max-width:560px){.ggrid.listview .gthumb{width:64px;height:64px}.ggrid.listview .gcta{display:none}}
 .glabs{display:flex;flex-wrap:wrap;gap:4px;margin-top:auto}
 .glab{font-family:'JetBrains Mono',monospace;font-size:9.5px;padding:2px 7px;border-radius:5px;background:var(--paper-2);color:var(--teal-deep)}
 .glab.ai{background:#fbe9d8;color:var(--coral)}
