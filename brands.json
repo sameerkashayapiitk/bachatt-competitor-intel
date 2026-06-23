@@ -1,0 +1,857 @@
+[
+ {
+  "brand": "Jar",
+  "slug": "jar",
+  "n": 802,
+  "videos": 802,
+  "statics": 0,
+  "format_mix": [
+   [
+    "Skit",
+    534
+   ],
+   [
+    "Production-Led",
+    97
+   ],
+   [
+    "Non-Skit",
+    96
+   ],
+   [
+    "Micro-Drama",
+    42
+   ],
+   [
+    "Non-Skit (multi-turn)",
+    33
+   ]
+  ],
+  "ai_yes": 0,
+  "ai_maybe": 0,
+  "ai_pct": 0.0,
+  "collab_pct": 34.4,
+  "collab_n": 276,
+  "collab_known": 802,
+  "top_langs": [
+   [
+    "Hindi",
+    331
+   ],
+   [
+    "Telugu",
+    131
+   ],
+   [
+    "Kannada",
+    122
+   ],
+   [
+    "Tamil",
+    71
+   ],
+   [
+    "English",
+    59
+   ],
+   [
+    "Marathi",
+    3
+   ]
+  ],
+  "top_themes": [
+   [
+    "Daily small savings in 24K gold; ₹20/day math",
+    1
+   ],
+   [
+    "Kids hoarding cash → redirect to gold savings",
+    1
+   ],
+   [
+    "Overspending after salary → broke → save instead",
+    1
+   ],
+   [
+    "Saving an ice-cream's cost daily builds a child's future",
+    1
+   ],
+   [
+    "How Gen-Z saves vs 90s kids",
+    1
+   ],
+   [
+    "Secret of the rich friend = disciplined saving",
+    1
+   ],
+   [
+    "Bank balance grows via daily gold saving",
+    1
+   ],
+   [
+    "Affording a wedding's costs via gold savings",
+    1
+   ]
+  ],
+  "top_creators": [
+   [
+    "Jar App",
+    527
+   ],
+   [
+    "realmandarchandwadkar",
+    6
+   ],
+   [
+    "nitinofficial_02",
+    5
+   ],
+   [
+    "arunkumar910200",
+    5
+   ],
+   [
+    "Harsh porwal",
+    4
+   ],
+   [
+    "fawaz_manns",
+    4
+   ],
+   [
+    "Viral Art",
+    4
+   ],
+   [
+    "3in1vines9",
+    4
+   ],
+   [
+    "Ketan mehta",
+    3
+   ],
+   [
+    "Sachin Rishtey",
+    3
+   ]
+  ],
+  "avg_dur": 55.2
+ },
+ {
+  "brand": "Good Score",
+  "slug": "good-score",
+  "n": 744,
+  "videos": 744,
+  "statics": 0,
+  "format_mix": [
+   [
+    "AI-Generated",
+    237
+   ],
+   [
+    "Non-Skit",
+    177
+   ],
+   [
+    "Production-Led",
+    129
+   ],
+   [
+    "Skit",
+    81
+   ],
+   [
+    "Micro-Drama",
+    66
+   ],
+   [
+    "Non-Skit (multi-turn)",
+    54
+   ]
+  ],
+  "ai_yes": 229,
+  "ai_maybe": 46,
+  "ai_pct": 30.8,
+  "collab_pct": 0.8,
+  "collab_n": 6,
+  "collab_known": 744,
+  "top_langs": [
+   [
+    "Hindi",
+    270
+   ],
+   [
+    "Telugu",
+    106
+   ],
+   [
+    "Kannada",
+    79
+   ],
+   [
+    "English",
+    74
+   ],
+   [
+    "Tamil",
+    72
+   ],
+   [
+    "ja",
+    3
+   ]
+  ],
+  "top_themes": [
+   [
+    "CIBIL score improvement to 750+ via ₹99 expert consultation",
+    4
+   ],
+   [
+    "Credit red flags vs green flags; GoodScore as the green flag",
+    4
+   ],
+   [
+    "₹99 expert consultation to raise CIBIL above 750",
+    3
+   ],
+   [
+    "Improve credit score to 750+ for loan approval",
+    3
+   ],
+   [
+    "Splitting large overdue dues into small monthly installments via GoodScore",
+    3
+   ],
+   [
+    "Raised credit score in 3 months using GoodScore expert plan",
+    2
+   ],
+   [
+    "Improve credit score to 750+ with expert plan",
+    2
+   ],
+   [
+    "Avoid loan default by splitting overdue into small EMIs",
+    2
+   ]
+  ],
+  "top_creators": [
+   [
+    "GoodScore",
+    738
+   ],
+   [
+    "This ad has multiple versions",
+    4
+   ],
+   [
+    "Low impression count",
+    2
+   ]
+  ],
+  "avg_dur": 41.0
+ },
+ {
+  "brand": "Jio Finance",
+  "slug": "jio-finance",
+  "n": 186,
+  "videos": 186,
+  "statics": 0,
+  "format_mix": [
+   [
+    "Production-Led",
+    154
+   ],
+   [
+    "Micro-Drama",
+    19
+   ],
+   [
+    "Non-Skit",
+    12
+   ],
+   [
+    "AI-Generated",
+    1
+   ]
+  ],
+  "ai_yes": 1,
+  "ai_maybe": 6,
+  "ai_pct": 0.5,
+  "collab_pct": 0.0,
+  "collab_n": 0,
+  "collab_known": 186,
+  "top_langs": [
+   [
+    "English",
+    127
+   ],
+   [
+    "Hindi",
+    3
+   ]
+  ],
+  "top_themes": [
+   [
+    "Digital gold investment earns JioPoints",
+    8
+   ],
+   [
+    "Digital gold / JioGold SIP from Rs.10",
+    6
+   ],
+   [
+    "Compare and book FD on JioFinance",
+    5
+   ],
+   [
+    "Fixed deposit comparison and booking",
+    4
+   ],
+   [
+    "Open savings account in a minute",
+    3
+   ],
+   [
+    "Open Jio Payments bank account in minutes",
+    3
+   ],
+   [
+    "Personal loan for medical needs",
+    3
+   ],
+   [
+    "UPI payments earn JioPoints",
+    3
+   ]
+  ],
+  "top_creators": [
+   [
+    "JioFinance",
+    186
+   ]
+  ],
+  "avg_dur": 25.0
+ },
+ {
+  "brand": "Oolka",
+  "slug": "oolka",
+  "n": 248,
+  "videos": 248,
+  "statics": 0,
+  "format_mix": [
+   [
+    "Skit",
+    78
+   ],
+   [
+    "Non-Skit",
+    53
+   ],
+   [
+    "AI-Generated",
+    53
+   ],
+   [
+    "Production-Led",
+    50
+   ],
+   [
+    "Non-Skit (multi-turn)",
+    9
+   ],
+   [
+    "Micro-Drama",
+    5
+   ]
+  ],
+  "ai_yes": 54,
+  "ai_maybe": 6,
+  "ai_pct": 21.8,
+  "collab_pct": 55.6,
+  "collab_n": 138,
+  "collab_known": 248,
+  "top_langs": [
+   [
+    "Hindi",
+    127
+   ],
+   [
+    "English",
+    17
+   ],
+   [
+    "Telugu",
+    12
+   ],
+   [
+    "Kannada",
+    11
+   ],
+   [
+    "Tamil",
+    11
+   ],
+   [
+    "Bengali",
+    6
+   ]
+  ],
+  "top_themes": [
+   [
+    "EMI paid but CIBIL still shows due -> Oolka AI mails bank/bureau to clear it",
+    2
+   ],
+   [
+    "Honest man's loan rejected because a brother's defaulted guarantee scarred his CIBIL → Oolka surfaces & disputes it",
+    2
+   ],
+   [
+    "Loan repeatedly rejected; Oolka works in Tamil/100+ languages and finds the wrong report entry",
+    2
+   ],
+   [
+    "Dreams of house/bike/iPhone blocked by low credit score → Oolka AI builds step-by-step plan to 800+",
+    2
+   ],
+   [
+    "Too many banking apps / loans to track → Oolka unifies all accounts, EMIs and cashback in one place",
+    2
+   ],
+   [
+    "Low score → higher EMI; Oolka AI raised Sonu's score, renegotiated interest, cut EMI Rs.5,000",
+    2
+   ],
+   [
+    "Oolka emails the bank to lower your interest rate and solves all loan/EMI problems",
+    2
+   ],
+   [
+    "Oolka AI builds a payment plan and emails your bank loan officer to settle a loan",
+    2
+   ]
+  ],
+  "top_creators": [
+   [
+    "Oolka",
+    110
+   ],
+   [
+    "(unknown creator)",
+    78
+   ],
+   [
+    "arundvenu",
+    3
+   ],
+   [
+    "Waste Of Time",
+    2
+   ],
+   [
+    "amirkdboys",
+    1
+   ],
+   [
+    "_wood_hacker_",
+    1
+   ],
+   [
+    "FT Guys",
+    1
+   ],
+   [
+    "chethangabbaladka",
+    1
+   ],
+   [
+    "a3boys.18",
+    1
+   ],
+   [
+    "Pavitra Sagar 46",
+    1
+   ]
+  ],
+  "avg_dur": 51.8
+ },
+ {
+  "brand": "Slice",
+  "slug": "slice",
+  "n": 29,
+  "videos": 29,
+  "statics": 0,
+  "format_mix": [
+   [
+    "Non-Skit",
+    19
+   ],
+   [
+    "Skit",
+    7
+   ],
+   [
+    "Production-Led",
+    3
+   ]
+  ],
+  "ai_yes": 0,
+  "ai_maybe": 0,
+  "ai_pct": 0.0,
+  "collab_pct": null,
+  "collab_n": 0,
+  "collab_known": 0,
+  "top_langs": [
+   [
+    "en",
+    23
+   ],
+   [
+    "es",
+    2
+   ],
+   [
+    "hi",
+    2
+   ],
+   [
+    "id",
+    1
+   ],
+   [
+    "ru",
+    1
+   ]
+  ],
+  "top_themes": [
+   [
+    "UPI credit card 3% cashback + pay-in-3",
+    3
+   ],
+   [
+    "UPI credit card 3% cashback, no fees",
+    3
+   ],
+   [
+    "Normal UPI gives nothing back; slice guarantees cashback",
+    2
+   ],
+   [
+    "UPI credit card 3% cashback, lifetime free",
+    1
+   ],
+   [
+    "UPI credit card guaranteed up to 3% cashback",
+    1
+   ],
+   [
+    "UPI credit card 3% cashback on every scan",
+    1
+   ],
+   [
+    "UPI credit card 3% cashback on every UPI payment",
+    1
+   ],
+   [
+    "UPI Credit Card cashback and zero-fee value proposition",
+    1
+   ]
+  ],
+  "top_creators": [
+   [
+    "Slice",
+    29
+   ]
+  ],
+  "avg_dur": 25.1
+ },
+ {
+  "brand": "Stable Money",
+  "slug": "stable-money",
+  "n": 123,
+  "videos": 123,
+  "statics": 0,
+  "format_mix": [
+   [
+    "Non-Skit",
+    75
+   ],
+   [
+    "Production-Led",
+    23
+   ],
+   [
+    "Skit",
+    9
+   ],
+   [
+    "Non-Skit (multi-turn)",
+    8
+   ],
+   [
+    "Micro-Drama",
+    6
+   ],
+   [
+    "AI-Generated",
+    2
+   ]
+  ],
+  "ai_yes": 5,
+  "ai_maybe": 6,
+  "ai_pct": 4.1,
+  "collab_pct": 3.3,
+  "collab_n": 4,
+  "collab_known": 123,
+  "top_langs": [
+   [
+    "English",
+    84
+   ],
+   [
+    "Hindi",
+    37
+   ]
+  ],
+  "top_themes": [
+   [
+    "FD-backed credit card with free airport lounge access and cashback",
+    4
+   ],
+   [
+    "Choose safe FDs over volatile share market",
+    1
+   ],
+   [
+    "Bonds explained - fixed-income, regular payouts, 9-12%",
+    1
+   ],
+   [
+    "Recurring Deposit (RD) auto-savings with up to 8% returns and no lock-in",
+    1
+   ],
+   [
+    "Emergency fund via FD for financial stability, 8.3% returns, DICGC insured",
+    1
+   ],
+   [
+    "FD-backed lifetime-free credit card with 8% FD interest and flexible credit limit",
+    1
+   ],
+   [
+    "Why RD beats SIP for short-term goals; book RD on Stable Money",
+    1
+   ],
+   [
+    "Bonds offering 9-12% fixed returns via SEBI-registered broker, sell anytime, start from 1,000",
+    1
+   ]
+  ],
+  "top_creators": [
+   [
+    "Stable Money",
+    75
+   ],
+   [
+    "Stable Money India",
+    44
+   ],
+   [
+    "Financewithpapa",
+    2
+   ],
+   [
+    "harshvira19",
+    2
+   ]
+  ],
+  "avg_dur": 55.6
+ },
+ {
+  "brand": "Seekho",
+  "slug": "seekho",
+  "n": 994,
+  "videos": 994,
+  "statics": 0,
+  "format_mix": [
+   [
+    "Micro-Drama",
+    252
+   ],
+   [
+    "AI-Generated",
+    240
+   ],
+   [
+    "Talking-Head",
+    154
+   ],
+   [
+    "Presenter-Screen",
+    92
+   ],
+   [
+    "Skit",
+    86
+   ],
+   [
+    "Motion-Graphics",
+    63
+   ],
+   [
+    "Screen-Demo",
+    31
+   ],
+   [
+    "Street/Vox-pop",
+    29
+   ],
+   [
+    "Listicle",
+    21
+   ],
+   [
+    "Other",
+    19
+   ],
+   [
+    "Podcast",
+    7
+   ]
+  ],
+  "ai_yes": 0,
+  "ai_maybe": 0,
+  "ai_pct": 0.0,
+  "collab_pct": null,
+  "collab_n": 0,
+  "collab_known": 0,
+  "top_langs": [
+   [
+    "Hindi",
+    766
+   ],
+   [
+    "Kannada",
+    61
+   ],
+   [
+    "Tamil",
+    49
+   ],
+   [
+    "English",
+    37
+   ],
+   [
+    "Telugu",
+    33
+   ]
+  ],
+  "top_themes": [
+   [
+    "Getting a loan with a low CIBIL score",
+    4
+   ],
+   [
+    "Booking Tatkal train tickets yourself instead of paying agents",
+    4
+   ],
+   [
+    "Getting a loan even with a low CIBIL score",
+    4
+   ],
+   [
+    "Book Tatkal train tickets yourself instead of paying agents, using Seekho's step-by-step video",
+    3
+   ],
+   [
+    "Effortless daily home organization and management for housewives",
+    3
+   ],
+   [
+    "Five habits that keep you poor; learn finance instead",
+    3
+   ],
+   [
+    "5 habits making you poor + finance learning",
+    3
+   ],
+   [
+    "Emergency loans without bank hassle",
+    3
+   ]
+  ],
+  "top_creators": [
+   [
+    "Seekho App",
+    868
+   ],
+   [
+    "Seekho Finance",
+    126
+   ]
+  ],
+  "avg_dur": 1.3
+ },
+ {
+  "brand": "Scripbox",
+  "slug": "scripbox",
+  "n": 246,
+  "videos": 9,
+  "statics": 237,
+  "format_mix": [
+   [
+    "Production-Led",
+    246
+   ]
+  ],
+  "ai_yes": 0,
+  "ai_maybe": 120,
+  "ai_pct": 0.0,
+  "collab_pct": 0.0,
+  "collab_n": 0,
+  "collab_known": 246,
+  "top_langs": [],
+  "top_themes": [
+   [
+    "Wealth as a weekend hobby (neglect)",
+    136
+   ],
+   [
+    "Wealth deserves career-grade expertise",
+    53
+   ],
+   [
+    "First Crore milestone",
+    16
+   ],
+   [
+    "DIY investing has a ceiling",
+    13
+   ],
+   [
+    "No pension / retirement fear",
+    9
+   ],
+   [
+    "Business-class of investing / upgrade",
+    4
+   ],
+   [
+    "Top 1% / elite aspiration",
+    4
+   ],
+   [
+    "DIY ceiling / ₹50L+ needs strategy",
+    3
+   ]
+  ],
+  "top_creators": [
+   [
+    "Scripbox",
+    246
+   ]
+  ],
+  "avg_dur": 0
+ }
+]

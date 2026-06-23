@@ -1,0 +1,293 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Competitor Creative Intelligence · Bachatt</title><link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%233b3ac9'/><circle cx='16' cy='16' r='6' fill='%23e0a526'/></svg>"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"><style>
+:root{--ink:#11152e;--paper:#eef1fa;--paper-2:#e1e6f5;--teal:#3b3ac9;--teal-deep:#2a2aa0;--gold:#e0a526;--coral:#e2603f;--line:#c7cde4;--mut:#5b6489;--card:#ffffff;--nav:rgba(232,236,250,.92)}
+[data-theme="dark"]{--ink:#e9ecf8;--paper:#0c0f1e;--paper-2:#191e34;--teal:#7188ff;--teal-deep:#a3b3ff;--gold:#efb94a;--coral:#ff7d5e;--line:#2a3155;--mut:#98a3c8;--card:#161b2e;--nav:rgba(14,18,36,.9)}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+@media (hover:hover) and (pointer:fine){a,button,*{cursor:none !important}}
+body{background:var(--paper);color:var(--ink);font-family:'Space Grotesk',sans-serif;line-height:1.5;-webkit-font-smoothing:antialiased;overflow-x:hidden;position:relative}
+.field{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}
+.blob{position:absolute;border-radius:50%;filter:blur(70px);opacity:.5}
+.b1{width:46vw;height:46vw;left:-12vw;top:-10vw;background:radial-gradient(circle,rgba(13,110,95,.22),transparent 70%)}
+.b2{width:42vw;height:42vw;right:-12vw;bottom:-12vw;background:radial-gradient(circle,rgba(224,165,38,.20),transparent 70%)}
+.b3{width:30vw;height:30vw;right:18vw;top:24vh;background:radial-gradient(circle,rgba(226,96,63,.12),transparent 70%)}
+@keyframes d1{0%,100%{transform:translate(0,0)}50%{transform:translate(8vw,6vh)}}
+@keyframes d2{0%,100%{transform:translate(0,0)}50%{transform:translate(-7vw,-5vh)}}
+@keyframes d3{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(-4vw,8vh) scale(1.12)}}
+.wrap{max-width:1120px;margin:0 auto;padding:0 28px;position:relative;z-index:1}
+.cursor-dot,.cursor-ring{position:fixed;top:0;left:0;z-index:9999;pointer-events:none;border-radius:50%;mix-blend-mode:multiply}
+.cursor-dot{width:7px;height:7px;background:var(--coral);transform:translate(-50%,-50%)}
+.cursor-ring{width:34px;height:34px;border:1.5px solid var(--teal);transform:translate(-50%,-50%);transition:width .25s,height .25s,border-color .25s,background .25s}
+body.hovering .cursor-ring{width:54px;height:54px;border-color:var(--coral);background:rgba(226,96,63,.06)}
+@media (hover:none),(pointer:coarse){.cursor-dot,.cursor-ring{display:none}}
+@media (prefers-reduced-motion:reduce){.cursor-dot,.cursor-ring{display:none}*{cursor:auto !important}}
+.progress{position:fixed;top:0;left:0;height:3px;width:0;z-index:9998;background:linear-gradient(90deg,var(--teal),var(--gold),var(--coral))}
+/* nav */
+.topnav{position:sticky;top:0;z-index:50;background:var(--nav);backdrop-filter:blur(10px);border-bottom:1px solid #bcccb4}
+.topnav::after{content:"";display:block;height:2px;background:linear-gradient(90deg,#f59e3c 0 33.3%,#f7f3ea 33.3% 66.6%,#1f9e4f 66.6% 100%);opacity:.65}
+.navwrap{max-width:1180px;margin:0 auto;padding:11px 28px;display:flex;align-items:center;gap:18px;justify-content:center;flex-wrap:wrap}
+.navbrand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--teal-deep);font-family:'Space Grotesk',sans-serif;font-size:15px;letter-spacing:.01em;font-weight:700;white-space:nowrap}
+.navbrand .gn{color:#1f9e4f}
+.navlogo{width:30px;height:30px;border-radius:8px;background:var(--teal);color:var(--paper);display:grid;place-items:center;font-family:'Fraunces',serif;font-weight:700;font-size:17px;flex:none}
+.navlinks{display:flex;align-items:center;gap:4px;flex-wrap:wrap;justify-content:center}
+.navlinks a{text-decoration:none;color:var(--teal-deep);font-family:'Space Grotesk',sans-serif;font-size:14px;font-weight:700;letter-spacing:.01em;padding:8px 14px;border-radius:8px;transition:background .15s,color .15s;white-space:nowrap;display:inline-flex;align-items:center;gap:6px}
+.navlinks a:hover{background:var(--paper-2);color:var(--teal-deep)}
+.navlinks a .sw{width:9px;height:9px;border-radius:3px;flex:none}
+.navlinks a.navcta{background:var(--teal);color:var(--paper)}
+.navlinks a.navcta:hover{background:var(--coral);color:#fff}
+.navlinks a.on{background:var(--paper-2);color:var(--teal-deep)}
+@media(max-width:820px){.navbrand .bt{display:none}.navlinks a{font-size:11px;padding:6px 8px}}
+header{padding:46px 0 24px}
+.brandrow{display:flex;align-items:center;gap:14px;margin-bottom:30px}
+.logo{width:38px;height:38px;border-radius:9px;background:var(--teal);color:var(--paper);display:grid;place-items:center;font-family:'Fraunces',serif;font-weight:700;font-size:22px;flex:none}
+.brandname{font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--teal-deep)}
+.brandtag{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--mut);letter-spacing:.05em}
+.eyebrow{font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--coral);margin-bottom:18px}
+h1{font-family:'Fraunces',serif;font-weight:600;font-size:clamp(40px,7vw,80px);line-height:.98;letter-spacing:-.02em;max-width:15ch}
+h1 em{font-style:italic;color:var(--teal)}
+.lede{margin-top:24px;max-width:60ch;font-size:18px;color:var(--mut)}
+.meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
+.chip{font-family:'JetBrains Mono',monospace;font-size:12px;padding:7px 13px;border:1px solid var(--line);border-radius:999px;background:var(--card);color:var(--teal-deep);transition:transform .2s,background .2s;text-decoration:none}
+.chip:hover{transform:translateY(-2px);background:#fff;border-color:var(--teal)}
+.chip b{color:var(--coral)}
+.rule{height:1px;background:var(--line);margin:42px 0}
+.track{padding:8px 0 24px;scroll-margin-top:74px}
+.trackhead{display:flex;align-items:baseline;gap:18px;margin-bottom:8px}
+.tracknum{font-family:'Fraunces',serif;font-style:italic;font-weight:500;font-size:clamp(38px,5vw,58px);color:var(--gold);line-height:1;flex:none}
+.tracktitle{font-family:'Fraunces',serif;font-weight:600;font-size:clamp(24px,3.6vw,36px);letter-spacing:-.01em}
+.tracksub{margin:6px 0 0;color:var(--mut);max-width:64ch;font-size:16px}
+.tracksub b{color:var(--ink);font-weight:600}
+.board{margin-top:28px;display:grid;gap:10px}
+.brow{display:grid;grid-template-columns:210px 1fr auto;gap:16px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 16px;transition:transform .2s,border-color .2s;text-decoration:none;color:inherit}
+.brow:hover{transform:translateX(4px);border-color:var(--teal)}
+.brow.t3{background:var(--card)}
+.brow .en{font-family:'Space Grotesk';font-weight:600;font-size:15px;display:flex;align-items:center;gap:9px;color:var(--ink)}
+.swatch{width:11px;height:11px;border-radius:3px;flex:none}
+.brow .barwrap{position:relative;height:26px;border-radius:6px;background:var(--paper-2);overflow:hidden}
+.brow .bar{position:absolute;left:0;top:0;bottom:0;border-radius:6px;display:flex;align-items:center;padding-left:10px;color:#fff;font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:600}
+.brow .mets{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--mut);text-align:right;white-space:nowrap}
+.brow .mets b{color:var(--teal-deep)}
+.brow .go{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--coral);margin-left:6px}
+.rankbadge{font-family:'Fraunces',serif;font-style:italic;color:var(--gold);width:26px;text-align:center;font-size:18px}
+.themes{margin-top:22px;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.theme{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px;text-decoration:none;color:inherit;transition:transform .2s,border-color .2s}
+.theme:hover{transform:translateY(-3px);border-color:var(--teal)}
+.theme .tn{font-weight:600;font-size:14px;margin-bottom:8px;display:flex;justify-content:space-between;gap:8px}
+.theme .tn .ar{color:var(--coral);font-family:'JetBrains Mono',monospace;font-size:12px}
+.theme .tb{height:7px;border-radius:4px;background:var(--paper-2);overflow:hidden;margin-bottom:6px}
+.theme .tb i{display:block;height:100%;border-radius:4px}
+.theme .tm{font-family:'JetBrains Mono',monospace;font-size:11.5px;color:var(--mut)}
+.ads{margin-top:24px;display:grid;grid-template-columns:repeat(auto-fill,minmax(232px,1fr));gap:13px}
+.ad{position:relative;background:var(--card);border:1px solid var(--line);border-radius:13px;overflow:hidden;transition:transform .18s,box-shadow .18s,border-color .18s;display:flex;flex-direction:column;content-visibility:auto;contain-intrinsic-size:240px 360px}
+.ad:hover{transform:translateY(-4px);box-shadow:0 14px 34px -16px rgba(8,69,59,.42);border-color:var(--teal)}
+.ad .thumb{position:relative;aspect-ratio:1/1;background:var(--paper-2) center/cover no-repeat;border-bottom:1px solid var(--line)}
+/* list view */
+.ads.listview{grid-template-columns:1fr;gap:8px}
+.ads.listview .ad{flex-direction:row;align-items:center}
+.ads.listview .ad .thumb-wrap{width:84px;height:84px;flex:none;align-self:center;margin:10px;border-radius:9px;overflow:hidden}
+.ads.listview .ad .thumb{aspect-ratio:auto;width:100%;height:100%;border-bottom:none}
+.ads.listview .ad .rk{top:4px;left:4px;font-size:9.5px;padding:2px 5px}
+.ads.listview .ad .body{padding:10px 14px 10px 0;gap:5px;justify-content:center}
+.ads.listview .ad .ti{font-size:14px}
+.ads.listview .ad .fh,.ads.listview .ad .ev{display:none}
+.ads.listview .ad .mets{margin-top:4px;border-top:none;padding-top:0}
+.ads.listview .ad .cta{margin-top:4px}
+@media(max-width:560px){.ads.listview .ad .thumb-wrap{width:64px;height:64px;margin:8px}.ads.listview .ad .cta{display:none}}
+.viewtog{display:inline-flex;border:1px solid var(--line);border-radius:999px;overflow:hidden}
+.viewtog button{font-family:'JetBrains Mono',monospace;font-size:11.5px;padding:6px 12px;background:var(--card);color:var(--mut);border:none;cursor:pointer;transition:.15s}
+.viewtog button.on{background:var(--teal);color:#fff}
+.ad .thumb.ph{display:grid;place-items:center;color:var(--mut);font-family:'JetBrains Mono',monospace;font-size:11px}
+.ad .rk{position:absolute;top:8px;left:8px;background:var(--teal-deep);color:var(--paper);font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:600;padding:3px 8px;border-radius:7px}
+.ad .play{position:absolute;inset:0;display:grid;place-items:center;opacity:0;transition:.2s;background:rgba(8,69,59,.32)}
+.ad .thumb-wrap:hover .play{opacity:1}
+.ad .play span{width:48px;height:48px;border-radius:50%;background:var(--coral);color:#fff;display:grid;place-items:center;font-size:18px}
+.ad .body{padding:12px 13px 13px;display:flex;flex-direction:column;gap:7px;flex:1}
+.ad .ti{font-weight:600;font-size:13.5px;line-height:1.22;letter-spacing:-.01em}
+.cstretch{position:absolute;inset:0;z-index:1;cursor:pointer}
+.ad:hover{cursor:pointer}.ad:hover .ti{color:var(--teal-deep)}
+.ad .cta{position:relative;z-index:2}
+.ad .adno{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--mut)}
+.ad .adno b{color:var(--teal-deep)}
+.ad .labs{display:flex;flex-wrap:wrap;gap:5px}
+.lab{font-family:'JetBrains Mono',monospace;font-size:10.5px;padding:3px 8px;border-radius:6px;background:var(--paper-2);color:var(--teal-deep)}
+.lab.emo{color:#fff}
+.lab.hook{background:#fbe9d8;color:var(--coral)}
+.lab.lang{background:transparent;border:1px solid var(--line);color:var(--mut)}
+.lab.fmt{background:#efe7d2;color:#7a5e1f;border:1px solid #e0d3aa}
+.ad .fh{font-size:13px;color:var(--ink)}
+.ad .fh i{font-family:'Fraunces',serif;color:var(--gold);font-style:italic}
+.ad .ev{font-size:12.5px;color:var(--mut);border-left:2px solid var(--line);padding-left:9px}
+.ad .mets{display:flex;flex-wrap:wrap;gap:10px;font-family:'JetBrains Mono',monospace;font-size:11.5px;color:var(--mut);margin-top:auto;padding-top:6px;border-top:1px dashed var(--line)}
+.ad .mets b{color:var(--teal-deep)}
+.ad .cta{margin-top:8px;display:flex;gap:7px;flex-wrap:wrap}
+.ad .cta a{display:inline-flex;align-items:center;gap:6px;font-family:'JetBrains Mono',monospace;font-size:12px;text-decoration:none;color:var(--paper);background:var(--teal);padding:8px 12px;border-radius:8px;transition:background .2s,transform .15s}
+.ad .cta a:hover{transform:translateY(-1px)}
+.ad .cta a.drv{background:var(--teal)}.ad .cta a.drv:hover{background:var(--teal-deep)}
+.ad .cta a.ig{background:linear-gradient(60deg,#c9981f,#e2603f)}.ad .cta a.ig:hover{filter:brightness(1.08)}
+.ad .cta a.fb{background:#3a5a98}
+.ad .cta a.dis{background:var(--paper-2);color:var(--mut);pointer-events:none}
+.filters{margin:22px 0 10px;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.filters input{font-family:'JetBrains Mono',monospace;font-size:13px;padding:9px 13px;border:1px solid var(--line);border-radius:999px;background:var(--card);color:var(--ink);min-width:240px;outline:none}
+.filters select{font-family:'JetBrains Mono',monospace;font-size:12.5px;padding:8px 14px;border:1px solid var(--line);border-radius:999px;background:var(--card);color:var(--teal-deep);outline:none;cursor:pointer;max-width:260px}
+.filters select:focus{border-color:var(--teal)}
+.filters input:focus{border-color:var(--teal)}
+.fchip{font-family:'JetBrains Mono',monospace;font-size:11.5px;padding:6px 12px;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--mut);cursor:pointer;transition:.15s;user-select:none}
+.fchip.on{background:var(--teal);color:#fff;border-color:var(--teal)}
+.fgroup{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.fglabel{font-family:'JetBrains Mono',monospace;font-size:10.5px;text-transform:uppercase;letter-spacing:.12em;color:var(--mut);margin-right:2px;width:74px;flex:none}
+.fbar{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:8px}
+#count{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--mut)}
+.clearbtn{font-family:'JetBrains Mono',monospace;font-size:11.5px;padding:6px 12px;border-radius:999px;border:1px solid var(--coral);background:transparent;color:var(--coral);cursor:pointer}
+.defs{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:14px;margin-top:20px}
+.defcard{background:var(--card);border:1px solid var(--line);border-radius:13px;padding:16px 18px;transition:transform .2s,border-color .2s}
+.defcard:hover{transform:translateY(-3px);border-color:var(--teal)}
+.defcard .dterm{font-weight:600;font-size:15.5px;display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}
+.defcard .dterm .tag{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.06em;text-transform:uppercase;padding:2px 7px;border-radius:5px}
+.tag.data{background:#dbeee6;color:var(--teal-deep)}
+.tag.judge{background:#fbe9d8;color:var(--coral)}
+.defcard .dunit{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--mut)}
+.defcard .dformula{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--teal-deep);background:var(--paper-2);padding:5px 9px;border-radius:6px;margin:9px 0 6px;display:inline-block}
+.defcard .dmean{font-size:13.5px;color:var(--ink);line-height:1.5}
+.defcard .dnote{font-size:12px;color:var(--coral);margin-top:9px;display:flex;gap:6px}
+.taxrow{display:flex;flex-wrap:wrap;gap:7px;margin-top:14px}
+.taxchip{font-family:'JetBrains Mono',monospace;font-size:11.5px;padding:5px 10px;border-radius:7px;background:var(--paper-2);color:var(--teal-deep);display:inline-flex;align-items:center;gap:6px}
+.taxchip .sw{width:9px;height:9px;border-radius:3px;flex:none}
+footer{padding:48px 0 80px;color:var(--mut);font-family:'JetBrains Mono',monospace;font-size:12px;text-align:center;letter-spacing:.04em}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s cubic-bezier(.2,.7,.3,1),transform .7s cubic-bezier(.2,.7,.3,1)}
+.reveal.in{opacity:1;transform:none}
+@media (max-width:640px){.brow{grid-template-columns:120px 1fr}.brow .mets{grid-column:1/-1;text-align:left}.fglabel{width:auto}}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.blob{animation:none}}
+.navlogoimg{height:24px;width:auto;background:#fff;padding:4px 7px;border-radius:7px;display:block}.navtoggle{font-size:15px;line-height:1;background:transparent;border:1px solid var(--line);color:var(--teal-deep);width:34px;height:34px;border-radius:8px;cursor:pointer;display:inline-grid;place-items:center}.navtoggle:hover{background:var(--paper-2)}.herologo{height:42px;width:auto;background:#fff;padding:5px 9px;border-radius:10px;display:block}[data-theme=dark] .lab.fmt{background:#2a2540;color:#e6c878;border-color:#3a3358}[data-theme=dark] .lab.hook{background:#3a2630;color:#ffb59c}[data-theme=dark] .topnav::after{opacity:.5}[data-theme=dark] .cursor-dot,[data-theme=dark] .cursor-ring{mix-blend-mode:normal}
+
+.navtoggle{font-size:15px;line-height:1;background:transparent;border:1px solid var(--line);color:var(--teal-deep);width:34px;height:34px;border-radius:8px;cursor:pointer;display:inline-grid;place-items:center}
+.navtoggle:hover{background:var(--paper-2)}
+.backlink{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--mut);text-decoration:none;border:1px solid var(--line);padding:7px 11px;border-radius:8px}
+.backlink:hover{border-color:var(--teal);color:var(--teal-deep)}
+.brandgrid{margin-top:24px;display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px}
+.bcard{position:relative;background:var(--card);border:1px solid var(--line);border-radius:15px;padding:20px;transition:transform .18s,border-color .18s;overflow:hidden}
+.bcard:hover{transform:translateY(-4px);border-color:var(--teal)}
+.bcard .cstretch{position:absolute;inset:0;z-index:1}
+.bcard .bhd,.bcard .bbody{position:relative;z-index:2;pointer-events:none}
+.bcard .bdot{width:34px;height:34px;border-radius:9px;display:grid;place-items:center;font-family:'Fraunces',serif;font-weight:700;color:#fff;font-size:17px;flex:none}
+.bcard .bhd{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.bcard .bname{font-family:'Fraunces',serif;font-weight:600;font-size:21px}
+.bcard .bn{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--mut)}
+.bstats{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-bottom:12px}
+.bstat{background:var(--paper-2);border-radius:9px;padding:9px 11px}
+.bstat .v{font-family:'Space Grotesk';font-weight:700;font-size:17px;color:var(--teal-deep)}
+.bstat .l{font-family:'JetBrains Mono',monospace;font-size:9.5px;color:var(--mut);text-transform:uppercase;letter-spacing:.07em;margin-top:1px}
+.bmix{display:flex;height:8px;border-radius:5px;overflow:hidden;margin-bottom:8px}
+.bmix span{display:block;height:100%}
+.btags{display:flex;flex-wrap:wrap;gap:5px}
+.btag{font-family:'JetBrains Mono',monospace;font-size:10px;padding:3px 8px;border-radius:6px;background:var(--paper-2);color:var(--teal-deep)}
+.insightgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;margin-top:18px}
+.ipanel{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px}
+.ipanel h3{font-family:'Fraunces',serif;font-weight:600;font-size:19px;margin-bottom:14px}
+.bar{display:flex;align-items:center;gap:10px;margin:7px 0;font-family:'JetBrains Mono',monospace;font-size:12px}
+.bar .bl{width:120px;flex:none;color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.bar .bt{flex:1;height:11px;background:var(--paper-2);border-radius:6px;overflow:hidden}
+.bar .bt i{display:block;height:100%;background:linear-gradient(90deg,var(--teal),var(--teal-deep))}
+.bar .bv{width:54px;flex:none;text-align:right;color:var(--mut)}
+.ggrid{margin-top:24px;display:grid;grid-template-columns:repeat(auto-fill,minmax(248px,1fr));gap:13px}
+.gcard{position:relative;background:var(--card);border:1px solid var(--line);border-radius:13px;overflow:hidden;display:flex;flex-direction:column;transition:transform .18s,box-shadow .18s,border-color .18s;content-visibility:auto;contain-intrinsic-size:248px 360px}
+.gcard:hover{transform:translateY(-4px);box-shadow:0 14px 34px -16px rgba(20,30,80,.4);border-color:var(--teal)}
+.gthumb{position:relative;aspect-ratio:1/1;background:var(--paper-2) center/cover no-repeat;border-bottom:1px solid var(--line)}
+.gthumb.ph{display:grid;place-items:center;color:var(--mut);font-family:'JetBrains Mono',monospace;font-size:11px}
+.gthumb .rk{position:absolute;top:7px;left:7px;background:var(--teal-deep);color:#fff;font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:600;padding:3px 7px;border-radius:6px}
+.gthumb .bchip{position:absolute;top:7px;right:7px;color:#fff;font-family:'JetBrains Mono',monospace;font-size:9.5px;font-weight:600;padding:3px 7px;border-radius:6px}
+.gbody{padding:11px 12px 12px;display:flex;flex-direction:column;gap:6px;flex:1}
+.gbody .gh{font-weight:600;font-size:13px;line-height:1.25}
+.gbody .gmsg{font-size:11.5px;color:var(--mut);line-height:1.4}
+.glabs{display:flex;flex-wrap:wrap;gap:4px;margin-top:auto}
+.glab{font-family:'JetBrains Mono',monospace;font-size:9.5px;padding:2px 7px;border-radius:5px;background:var(--paper-2);color:var(--teal-deep)}
+.glab.ai{background:#fbe9d8;color:var(--coral)}
+.glab.col{background:#dceee2;color:#127a4e}
+.gcta{position:relative;z-index:2;margin-top:4px}
+.gcta a{display:inline-flex;align-items:center;gap:5px;font-family:'JetBrains Mono',monospace;font-size:11px;text-decoration:none;color:#fff;background:var(--teal);padding:6px 10px;border-radius:7px}
+.gcta a.fb{background:#3a5a98}.gcta a.drv{background:var(--teal)}
+.cstretch{position:absolute;inset:0;z-index:1;cursor:pointer}
+.icard{position:relative;background:var(--card);border:1px solid var(--line);border-radius:13px;padding:16px 18px;display:flex;flex-direction:column;gap:9px;transition:transform .18s,border-color .18s}
+.icard:hover{transform:translateY(-3px);border-color:var(--teal)}
+.ihook{font-family:'Fraunces',serif;font-weight:600;font-size:16px;line-height:1.3;color:var(--ink)}
+.ireframe{font-size:13px;color:var(--ink);line-height:1.5}
+.iscript{font-size:12px;color:var(--mut);line-height:1.55;border-left:2px solid var(--line);padding-left:10px;white-space:pre-wrap}
+.idetails summary{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--teal-deep);cursor:pointer;list-style:none}
+.idetails summary::-webkit-details-marker{display:none}
+.idetails summary:before{content:"▸ ";}.idetails[open] summary:before{content:"▾ ";}
+.imeta{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.icard .src{font-family:'JetBrains Mono',monospace;font-size:10px;color:#fff;padding:3px 8px;border-radius:6px;font-weight:600}
+.pri{font-family:'JetBrains Mono',monospace;font-size:10px;padding:3px 8px;border-radius:6px;background:#fbe9d8;color:var(--coral);font-weight:600}
+.ilink{margin-left:auto;font-family:'JetBrains Mono',monospace;font-size:11px;text-decoration:none;color:var(--teal-deep);border:1px solid var(--line);padding:5px 10px;border-radius:7px;position:relative;z-index:2}
+.ilink:hover{border-color:var(--teal)}
+</style></head><body><script>try{document.documentElement.setAttribute("data-theme",localStorage.getItem("theme")||"light")}catch(e){}</script><div class="field" aria-hidden="true"><div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div></div><div class="progress" id="prog"></div><div class="cursor-ring" id="cring"></div><div class="cursor-dot" id="cdot"></div><nav class="topnav"><div class="navwrap"><a class="navbrand" href="index.html"><span class="navlogo">वि</span><span class="bt">Competitor <span class="gn">Intel</span></span></a><div class="navlinks"><a class="on" href="index.html">Overview</a><a class="" href="index.html#brands">Brands</a><a class="" href="ideas.html">Bachatt Reels</a><a class="navcta " href="explore.html">Explore all 3,372 &rarr;</a><a class="backlink" href="https://sameerkashayapiitk.github.io/bachatt-top150-creative-intelligence/" title="Bachatt creative intelligence">← Bachatt site</a><button class="navtoggle" id="themeToggle" aria-label="toggle dark mode" title="dark mode">🌙</button></div></div></nav><div class="wrap"><header style="padding:48px 0 10px">
+<div class="brandrow"><div class="logo">वि</div><div><div class="brandname">Bachatt · Competitor Intel</div><div class="brandtag">9 fintech advertisers · reverse-engineered for Bachatt</div></div></div>
+<div class="eyebrow">Competitor creative intelligence</div>
+<h1>What India's <em>fintech</em> advertisers are running.</h1>
+<p class="lede">Every classified creative from 8 competitor ad libraries — 3,372 ads, impression-ranked, scored for format, theme, language, AI use and collaboration — plus 591 recreate-able Bachatt reel ideas reverse-engineered from the winners.</p>
+<div class="meta">
+<a class="chip" href="#brands"><b>8</b> brands</a>
+<a class="chip" href="explore.html"><b>3,372</b> creatives</a>
+<span class="chip"><b>3,135</b> video ads</span>
+<a class="chip" href="ideas.html"><b>591</b> Bachatt reel ideas →</a>
+</div></header><div class="rule"></div><section class="track" id="brands"><div class="trackhead"><div class="tracknum">01</div><div><div class="tracktitle">The scoreboard</div><p class="tracksub">Each competitor's ad-library footprint at a glance. <b>Click a brand</b> for the full breakdown.</p></div></div><div class="brandgrid"><div class="bcard"><a class="cstretch" href="brand.html?b=seekho" aria-label="Seekho breakdown"></a>
+<div class="bhd"><div class="bdot" style="background:#d4732a">S</div><div><div class="bname">Seekho</div><div class="bn">994 creatives · 994 video</div></div></div>
+<div class="bbody"><div class="bstats">
+<div class="bstat"><div class="v">Micro-Drama</div><div class="l">top format</div></div>
+<div class="bstat"><div class="v">0%</div><div class="l">AI-generated</div></div>
+<div class="bstat"><div class="v">—</div><div class="l">creator collab</div></div>
+<div class="bstat"><div class="v">Hindi</div><div class="l">top language</div></div>
+</div><div class="bmix"><span style="width:25.4%;background:#e2603f" title="Micro-Drama 252"></span><span style="width:24.1%;background:#db2777" title="AI-Generated 240"></span><span style="width:15.5%;background:#5b6489" title="Talking-Head 154"></span><span style="width:9.3%;background:#5b6489" title="Presenter-Screen 92"></span><span style="width:8.7%;background:#3b3ac9" title="Skit 86"></span><span style="width:6.3%;background:#5b6489" title="Motion-Graphics 63"></span><span style="width:3.1%;background:#5b6489" title="Screen-Demo 31"></span><span style="width:2.9%;background:#5b6489" title="Street/Vox-pop 29"></span><span style="width:2.1%;background:#5b6489" title="Listicle 21"></span><span style="width:1.9%;background:#5b6489" title="Other 19"></span><span style="width:0.7%;background:#5b6489" title="Podcast 7"></span></div><div class="btags"><span class="btag">Getting a loan with a low CIBIL score</span><span class="btag">Booking Tatkal train tickets yourself instead of paying agents</span></div></div></div><div class="bcard"><a class="cstretch" href="brand.html?b=jar" aria-label="Jar breakdown"></a>
+<div class="bhd"><div class="bdot" style="background:#7c3aed">J</div><div><div class="bname">Jar</div><div class="bn">802 creatives · 802 video</div></div></div>
+<div class="bbody"><div class="bstats">
+<div class="bstat"><div class="v">Skit</div><div class="l">top format</div></div>
+<div class="bstat"><div class="v">0%</div><div class="l">AI-generated</div></div>
+<div class="bstat"><div class="v">34%</div><div class="l">creator collab</div></div>
+<div class="bstat"><div class="v">Hindi</div><div class="l">top language</div></div>
+</div><div class="bmix"><span style="width:66.6%;background:#3b3ac9" title="Skit 534"></span><span style="width:12.1%;background:#0d9f6e" title="Production-Led 97"></span><span style="width:12.0%;background:#e0a526" title="Non-Skit 96"></span><span style="width:5.2%;background:#e2603f" title="Micro-Drama 42"></span><span style="width:4.1%;background:#7c3aed" title="Non-Skit (multi-turn) 33"></span></div><div class="btags"><span class="btag">Daily small savings in 24K gold; ₹20/day math</span><span class="btag">Kids hoarding cash → redirect to gold savings</span></div></div></div><div class="bcard"><a class="cstretch" href="brand.html?b=good-score" aria-label="Good Score breakdown"></a>
+<div class="bhd"><div class="bdot" style="background:#0ea5a0">G</div><div><div class="bname">Good Score</div><div class="bn">744 creatives · 744 video</div></div></div>
+<div class="bbody"><div class="bstats">
+<div class="bstat"><div class="v">AI-Generated</div><div class="l">top format</div></div>
+<div class="bstat"><div class="v">31%</div><div class="l">AI-generated</div></div>
+<div class="bstat"><div class="v">1%</div><div class="l">creator collab</div></div>
+<div class="bstat"><div class="v">Hindi</div><div class="l">top language</div></div>
+</div><div class="bmix"><span style="width:31.9%;background:#db2777" title="AI-Generated 237"></span><span style="width:23.8%;background:#e0a526" title="Non-Skit 177"></span><span style="width:17.3%;background:#0d9f6e" title="Production-Led 129"></span><span style="width:10.9%;background:#3b3ac9" title="Skit 81"></span><span style="width:8.9%;background:#e2603f" title="Micro-Drama 66"></span><span style="width:7.3%;background:#7c3aed" title="Non-Skit (multi-turn) 54"></span></div><div class="btags"><span class="btag">CIBIL score improvement to 750+ via ₹99 expert consultation</span><span class="btag">Credit red flags vs green flags; GoodScore as the green flag</span></div></div></div><div class="bcard"><a class="cstretch" href="brand.html?b=oolka" aria-label="Oolka breakdown"></a>
+<div class="bhd"><div class="bdot" style="background:#e2603f">O</div><div><div class="bname">Oolka</div><div class="bn">248 creatives · 248 video</div></div></div>
+<div class="bbody"><div class="bstats">
+<div class="bstat"><div class="v">Skit</div><div class="l">top format</div></div>
+<div class="bstat"><div class="v">22%</div><div class="l">AI-generated</div></div>
+<div class="bstat"><div class="v">56%</div><div class="l">creator collab</div></div>
+<div class="bstat"><div class="v">Hindi</div><div class="l">top language</div></div>
+</div><div class="bmix"><span style="width:31.5%;background:#3b3ac9" title="Skit 78"></span><span style="width:21.4%;background:#e0a526" title="Non-Skit 53"></span><span style="width:21.4%;background:#db2777" title="AI-Generated 53"></span><span style="width:20.2%;background:#0d9f6e" title="Production-Led 50"></span><span style="width:3.6%;background:#7c3aed" title="Non-Skit (multi-turn) 9"></span><span style="width:2.0%;background:#e2603f" title="Micro-Drama 5"></span></div><div class="btags"><span class="btag">EMI paid but CIBIL still shows due -&gt; Oolka AI mails bank/bureau to clear it</span><span class="btag">Honest man&#x27;s loan rejected because a brother&#x27;s defaulted guarantee scarred his CIBIL → Oolka surfaces &amp; disputes it</span></div></div></div><div class="bcard"><a class="cstretch" href="brand.html?b=scripbox" aria-label="Scripbox breakdown"></a>
+<div class="bhd"><div class="bdot" style="background:#2563eb">S</div><div><div class="bname">Scripbox</div><div class="bn">246 creatives · 9 video</div></div></div>
+<div class="bbody"><div class="bstats">
+<div class="bstat"><div class="v">Production-Led</div><div class="l">top format</div></div>
+<div class="bstat"><div class="v">0%</div><div class="l">AI-generated</div></div>
+<div class="bstat"><div class="v">0%</div><div class="l">creator collab</div></div>
+<div class="bstat"><div class="v">—</div><div class="l">top language</div></div>
+</div><div class="bmix"><span style="width:100.0%;background:#0d9f6e" title="Production-Led 246"></span></div><div class="btags"><span class="btag">Wealth as a weekend hobby (neglect)</span><span class="btag">Wealth deserves career-grade expertise</span></div></div></div><div class="bcard"><a class="cstretch" href="brand.html?b=jio-finance" aria-label="Jio Finance breakdown"></a>
+<div class="bhd"><div class="bdot" style="background:#1d4ed8">J</div><div><div class="bname">Jio Finance</div><div class="bn">186 creatives · 186 video</div></div></div>
+<div class="bbody"><div class="bstats">
+<div class="bstat"><div class="v">Production-Led</div><div class="l">top format</div></div>
+<div class="bstat"><div class="v">0%</div><div class="l">AI-generated</div></div>
+<div class="bstat"><div class="v">0%</div><div class="l">creator collab</div></div>
+<div class="bstat"><div class="v">English</div><div class="l">top language</div></div>
+</div><div class="bmix"><span style="width:82.8%;background:#0d9f6e" title="Production-Led 154"></span><span style="width:10.2%;background:#e2603f" title="Micro-Drama 19"></span><span style="width:6.5%;background:#e0a526" title="Non-Skit 12"></span><span style="width:0.5%;background:#db2777" title="AI-Generated 1"></span></div><div class="btags"><span class="btag">Digital gold investment earns JioPoints</span><span class="btag">Digital gold / JioGold SIP from Rs.10</span></div></div></div><div class="bcard"><a class="cstretch" href="brand.html?b=stable-money" aria-label="Stable Money breakdown"></a>
+<div class="bhd"><div class="bdot" style="background:#0d9f6e">S</div><div><div class="bname">Stable Money</div><div class="bn">123 creatives · 123 video</div></div></div>
+<div class="bbody"><div class="bstats">
+<div class="bstat"><div class="v">Non-Skit</div><div class="l">top format</div></div>
+<div class="bstat"><div class="v">4%</div><div class="l">AI-generated</div></div>
+<div class="bstat"><div class="v">3%</div><div class="l">creator collab</div></div>
+<div class="bstat"><div class="v">English</div><div class="l">top language</div></div>
+</div><div class="bmix"><span style="width:61.0%;background:#e0a526" title="Non-Skit 75"></span><span style="width:18.7%;background:#0d9f6e" title="Production-Led 23"></span><span style="width:7.3%;background:#3b3ac9" title="Skit 9"></span><span style="width:6.5%;background:#7c3aed" title="Non-Skit (multi-turn) 8"></span><span style="width:4.9%;background:#e2603f" title="Micro-Drama 6"></span><span style="width:1.6%;background:#db2777" title="AI-Generated 2"></span></div><div class="btags"><span class="btag">FD-backed credit card with free airport lounge access and cashback</span><span class="btag">Choose safe FDs over volatile share market</span></div></div></div><div class="bcard"><a class="cstretch" href="brand.html?b=slice" aria-label="Slice breakdown"></a>
+<div class="bhd"><div class="bdot" style="background:#7c5cff">S</div><div><div class="bname">Slice</div><div class="bn">29 creatives · 29 video</div></div></div>
+<div class="bbody"><div class="bstats">
+<div class="bstat"><div class="v">Non-Skit</div><div class="l">top format</div></div>
+<div class="bstat"><div class="v">0%</div><div class="l">AI-generated</div></div>
+<div class="bstat"><div class="v">—</div><div class="l">creator collab</div></div>
+<div class="bstat"><div class="v">en</div><div class="l">top language</div></div>
+</div><div class="bmix"><span style="width:65.5%;background:#e0a526" title="Non-Skit 19"></span><span style="width:24.1%;background:#3b3ac9" title="Skit 7"></span><span style="width:10.3%;background:#0d9f6e" title="Production-Led 3"></span></div><div class="btags"><span class="btag">UPI credit card 3% cashback + pay-in-3</span><span class="btag">UPI credit card 3% cashback, no fees</span></div></div></div></div></section><div class="rule"></div><section class="track"><div class="trackhead"><div class="tracknum">02</div><div><div class="tracktitle">Cross-brand patterns</div><p class="tracksub">How the field splits on format, AI, language and creator collaboration.</p></div></div><div class="insightgrid"><div class="ipanel"><h3>Format mix (all brands)</h3><div class="bar"><span class="bl">Skit</span><span class="bt"><i style="width:100.0%"></i></span><span class="bv">795</span></div><div class="bar"><span class="bl">Production-Led</span><span class="bt"><i style="width:88.3%"></i></span><span class="bv">702</span></div><div class="bar"><span class="bl">AI-Generated</span><span class="bt"><i style="width:67.0%"></i></span><span class="bv">533</span></div><div class="bar"><span class="bl">Non-Skit</span><span class="bt"><i style="width:54.3%"></i></span><span class="bv">432</span></div><div class="bar"><span class="bl">Micro-Drama</span><span class="bt"><i style="width:49.1%"></i></span><span class="bv">390</span></div><div class="bar"><span class="bl">Talking-Head</span><span class="bt"><i style="width:19.4%"></i></span><span class="bv">154</span></div></div><div class="ipanel"><h3>AI-generated share</h3><div class="bar"><span class="bl">Good Score</span><span class="bt"><i style="width:100.6%"></i></span><span class="bv">31%</span></div><div class="bar"><span class="bl">Oolka</span><span class="bt"><i style="width:71.4%"></i></span><span class="bv">22%</span></div><div class="bar"><span class="bl">Stable Money</span><span class="bt"><i style="width:13.0%"></i></span><span class="bv">4%</span></div><div class="bar"><span class="bl">Jio Finance</span><span class="bt"><i style="width:0.0%"></i></span><span class="bv">0%</span></div><div class="bar"><span class="bl">Jar</span><span class="bt"><i style="width:0.0%"></i></span><span class="bv">0%</span></div><div class="bar"><span class="bl">Slice</span><span class="bt"><i style="width:0.0%"></i></span><span class="bv">0%</span></div><div class="bar"><span class="bl">Seekho</span><span class="bt"><i style="width:0.0%"></i></span><span class="bv">0%</span></div><div class="bar"><span class="bl">Scripbox</span><span class="bt"><i style="width:0.0%"></i></span><span class="bv">0%</span></div></div><div class="ipanel"><h3>Spoken-language reach</h3><div class="bar"><span class="bl">Hindi</span><span class="bt"><i style="width:100.0%"></i></span><span class="bv">1534</span></div><div class="bar"><span class="bl">English</span><span class="bt"><i style="width:25.9%"></i></span><span class="bv">398</span></div><div class="bar"><span class="bl">Telugu</span><span class="bt"><i style="width:18.4%"></i></span><span class="bv">282</span></div><div class="bar"><span class="bl">Kannada</span><span class="bt"><i style="width:17.8%"></i></span><span class="bv">273</span></div><div class="bar"><span class="bl">Tamil</span><span class="bt"><i style="width:13.2%"></i></span><span class="bv">203</span></div><div class="bar"><span class="bl">en</span><span class="bt"><i style="width:1.5%"></i></span><span class="bv">23</span></div><div class="bar"><span class="bl">Bengali</span><span class="bt"><i style="width:0.4%"></i></span><span class="bv">6</span></div></div><div class="ipanel"><h3>Creator-collaboration rate</h3><div class="bar"><span class="bl">Oolka</span><span class="bt"><i style="width:100.7%"></i></span><span class="bv">56%</span></div><div class="bar"><span class="bl">Jar</span><span class="bt"><i style="width:61.2%"></i></span><span class="bv">34%</span></div><div class="bar"><span class="bl">Stable Money</span><span class="bt"><i style="width:5.4%"></i></span><span class="bv">3%</span></div><div class="bar"><span class="bl">Good Score</span><span class="bt"><i style="width:1.8%"></i></span><span class="bv">1%</span></div><div class="bar"><span class="bl">Jio Finance</span><span class="bt"><i style="width:0.0%"></i></span><span class="bv">0%</span></div><div class="bar"><span class="bl">Scripbox</span><span class="bt"><i style="width:0.0%"></i></span><span class="bv">0%</span></div></div></div></section><footer>Bachatt Competitor Creative Intelligence · 8 brands · 3,372 creatives · impression-ranked, ordinal · <a href="explore.html" style="color:var(--coral)">Explore all →</a></footer></div><script>(function(){var b=document.getElementById("themeToggle");if(!b)return;function ic(){return document.documentElement.getAttribute("data-theme")==="dark"?"\u2600":"\ud83c\udf19";}b.textContent=ic();b.onclick=function(){var n=document.documentElement.getAttribute("data-theme")==="dark"?"light":"dark";document.documentElement.setAttribute("data-theme",n);try{localStorage.setItem("theme",n)}catch(e){}b.textContent=ic();};})();</script><script>
+(function(){var b=document.getElementById('themeToggle');if(!b)return;function ic(){return document.documentElement.getAttribute('data-theme')==='dark'?'☀':'🌙';}b.textContent=ic();b.onclick=function(){var n=document.documentElement.getAttribute('data-theme')==='dark'?'light':'dark';document.documentElement.setAttribute('data-theme',n);try{localStorage.setItem('theme',n)}catch(e){}b.textContent=ic();};})();
+(function(){var dot=document.getElementById('cdot'),ring=document.getElementById('cring');if(!dot)return;var mx=innerWidth/2,my=innerHeight/2,rx=mx,ry=my;onmousemove=function(e){mx=e.clientX;my=e.clientY;dot.style.transform='translate(-50%,-50%) translate('+mx+'px,'+my+'px)';},{passive:true};(function l(){rx+=(mx-rx)*.45;ry+=(my-ry)*.45;ring.style.transform='translate(-50%,-50%) translate('+rx+'px,'+ry+'px)';requestAnimationFrame(l);})();
+document.addEventListener('mouseover',function(e){if(e.target.closest('.ad,.brow,.theme,.chip,.fchip,.cta a,.tracknum,.navlinks a,.navbrand'))document.body.classList.add('hovering');});
+document.addEventListener('mouseout',function(e){if(e.target.closest('.ad,.brow,.theme,.chip,.fchip,.cta a,.tracknum,.navlinks a,.navbrand'))document.body.classList.remove('hovering');});})();
+(function(){var b=document.getElementById('prog');function u(){var h=document.documentElement.scrollHeight-innerHeight;b.style.width=(h>0?scrollY/h*100:0)+'%';}onscroll=u;onresize=u;u();})();
+(function(){var els=document.querySelectorAll('.reveal');if(!('IntersectionObserver'in window)){els.forEach(function(e){e.classList.add('in');});return;}var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target);}});},{threshold:.12,rootMargin:'0px 0px -6% 0px'});els.forEach(function(e){io.observe(e);});})();
+</script></body></html>
