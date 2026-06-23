@@ -169,9 +169,9 @@
     54
    ]
   ],
-  "ai_yes": 229,
+  "ai_yes": 238,
   "ai_maybe": 46,
-  "ai_pct": 30.8,
+  "ai_pct": 32.0,
   "collab_pct": 0.8,
   "collab_n": 6,
   "collab_known": 744,
@@ -719,9 +719,9 @@
     7
    ]
   ],
-  "ai_yes": 0,
+  "ai_yes": 240,
   "ai_maybe": 0,
-  "ai_pct": 0.0,
+  "ai_pct": 24.1,
   "collab_pct": null,
   "collab_n": 0,
   "collab_known": 0,
