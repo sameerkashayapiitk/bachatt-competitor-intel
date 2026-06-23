@@ -197,7 +197,7 @@
     72
    ],
    [
-    "ja",
+    "Other",
     3
    ]
   ],
@@ -503,24 +503,16 @@
   "collab_known": 0,
   "top_langs": [
    [
-    "en",
+    "English",
     23
    ],
    [
-    "es",
+    "Other",
+    4
+   ],
+   [
+    "Hindi",
     2
-   ],
-   [
-    "hi",
-    2
-   ],
-   [
-    "id",
-    1
-   ],
-   [
-    "ru",
-    1
    ]
   ],
   "top_themes": [
