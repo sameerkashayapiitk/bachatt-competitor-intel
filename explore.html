@@ -167,6 +167,8 @@ footer{padding:48px 0 80px;color:var(--mut);font-family:'JetBrains Mono',monospa
 .bcard .cstretch{position:absolute;inset:0;z-index:1}
 .bcard .bhd,.bcard .bbody{position:relative;z-index:2;pointer-events:none}
 .bcard .bdot{width:34px;height:34px;border-radius:9px;display:grid;place-items:center;font-family:'Fraunces',serif;font-weight:700;color:#fff;font-size:17px;flex:none}
+.bico{width:40px;height:40px;border-radius:10px;object-fit:contain;background:#fff;padding:3px;border:1px solid var(--line);flex:none}
+.bico-lg{width:60px;height:60px;border-radius:14px;object-fit:contain;background:#fff;padding:5px;border:1px solid var(--line);flex:none}
 .bcard .bhd{display:flex;align-items:center;gap:12px;margin-bottom:14px}
 .bcard .bname{font-family:'Fraunces',serif;font-weight:600;font-size:21px}
 .bcard .bn{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--mut)}
@@ -232,6 +234,37 @@ footer{padding:48px 0 80px;color:var(--mut);font-family:'JetBrains Mono',monospa
 .pri{font-family:'JetBrains Mono',monospace;font-size:10px;padding:3px 8px;border-radius:6px;background:#fbe9d8;color:var(--coral);font-weight:600}
 .ilink{margin-left:auto;font-family:'JetBrains Mono',monospace;font-size:11px;text-decoration:none;color:var(--teal-deep);border:1px solid var(--line);padding:5px 10px;border-radius:7px;position:relative;z-index:2}
 .ilink:hover{border-color:var(--teal)}
+.icard{cursor:pointer}
+.idrv{font-family:'JetBrains Mono',monospace;font-size:11px;text-decoration:none;color:#fff;background:var(--teal);padding:5px 10px;border-radius:7px;position:relative;z-index:2}
+.idrv:hover{background:var(--teal-deep)}
+.ihint{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--mut);margin-top:2px}
+/* modal */
+.mback{position:fixed;inset:0;z-index:50;background:rgba(10,14,30,.62);backdrop-filter:blur(3px);display:none;align-items:flex-start;justify-content:center;padding:40px 18px;overflow:auto}
+.mback.on{display:flex}
+.modal{background:var(--card);border:1px solid var(--line);border-radius:16px;max-width:960px;width:100%;padding:0;overflow:hidden;box-shadow:0 30px 80px -20px rgba(10,14,30,.6)}
+.mhead{display:flex;align-items:center;gap:12px;padding:16px 22px;border-bottom:1px solid var(--line);flex-wrap:wrap}
+.mclose{margin-left:auto;background:transparent;border:1px solid var(--line);color:var(--ink);width:32px;height:32px;border-radius:8px;cursor:pointer;font-size:16px;position:relative;z-index:2}
+.mclose:hover{background:var(--paper-2)}
+.mbody{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:0}
+@media(max-width:760px){.mbody{grid-template-columns:1fr}}
+.mleft{padding:20px 22px;border-right:1px solid var(--line)}
+@media(max-width:760px){.mleft{border-right:none;border-bottom:1px solid var(--line)}}
+.mright{padding:20px 22px;min-width:0}
+.mframe{width:100%;border-radius:11px;border:1px solid var(--line);background:var(--paper-2);display:block}
+.mframe.ph{aspect-ratio:1/1;display:grid;place-items:center;color:var(--mut);font-family:'JetBrains Mono',monospace;font-size:12px}
+.mmets{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:14px}
+.mmet{background:var(--paper-2);border-radius:9px;padding:9px 11px}
+.mmet .v{font-family:'Space Grotesk';font-weight:700;font-size:16px;color:var(--teal-deep)}
+.mmet .l{font-family:'JetBrains Mono',monospace;font-size:9.5px;color:var(--mut);text-transform:uppercase;letter-spacing:.07em;margin-top:1px}
+.mlinks{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+.mlinks a{font-family:'JetBrains Mono',monospace;font-size:12px;text-decoration:none;color:#fff;padding:8px 13px;border-radius:8px}
+.mlinks a.drv{background:var(--teal)}.mlinks a.fb{background:#3a5a98}
+.msec{font-family:'JetBrains Mono',monospace;font-size:10.5px;text-transform:uppercase;letter-spacing:.1em;color:var(--coral);margin:0 0 7px}
+.mhook{font-family:'Fraunces',serif;font-weight:600;font-size:20px;line-height:1.25;margin-bottom:12px}
+.mreframe{font-size:13.5px;line-height:1.55;margin-bottom:14px}
+.mscript{font-size:12.5px;line-height:1.6;color:var(--ink);white-space:pre-wrap;background:var(--paper-2);border-radius:9px;padding:12px 14px;margin-bottom:14px}
+.mtrans{font-size:12.5px;line-height:1.7;color:var(--mut);max-height:260px;overflow:auto;border-left:2px solid var(--line);padding-left:12px}
+.msrchook{font-size:13px;color:var(--ink);margin-bottom:6px}
 </style></head><body><script>try{document.documentElement.setAttribute("data-theme",localStorage.getItem("theme")||"light")}catch(e){}</script><div class="field" aria-hidden="true"><div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div></div><div class="progress" id="prog"></div><div class="cursor-ring" id="cring"></div><div class="cursor-dot" id="cdot"></div><nav class="topnav"><div class="navwrap"><a class="navbrand" href="index.html"><span class="navlogo">वि</span><span class="bt">Competitor <span class="gn">Intel</span></span></a><div class="navlinks"><a class="" href="index.html">Overview</a><a class="" href="index.html#brands">Brands</a><a class="" href="ideas.html">Bachatt Relevant Reels</a><a class="navcta on" href="explore.html">Explore all 3,372 &rarr;</a><a class="backlink" href="https://sameerkashayapiitk.github.io/bachatt-top150-creative-intelligence/" title="Bachatt creative intelligence">← Bachatt site</a><button class="navtoggle" id="themeToggle" aria-label="toggle dark mode" title="dark mode">🌙</button></div></div></nav><div class="wrap"><header style="padding:34px 0 8px"><div class="eyebrow">Creative explorer</div>
 <h1 style="font-size:clamp(34px,5vw,56px)">Filter all <em>3,372</em> competitor creatives.</h1>
 <p class="lede" style="margin-top:14px">Stack filters across brand, format, language, AI and collaboration; search the hook or message; click any card to open it in the Meta Ad Library. Sorted by impression rank within each brand.</p></header>

@@ -167,6 +167,8 @@ footer{padding:48px 0 80px;color:var(--mut);font-family:'JetBrains Mono',monospa
 .bcard .cstretch{position:absolute;inset:0;z-index:1}
 .bcard .bhd,.bcard .bbody{position:relative;z-index:2;pointer-events:none}
 .bcard .bdot{width:34px;height:34px;border-radius:9px;display:grid;place-items:center;font-family:'Fraunces',serif;font-weight:700;color:#fff;font-size:17px;flex:none}
+.bico{width:40px;height:40px;border-radius:10px;object-fit:contain;background:#fff;padding:3px;border:1px solid var(--line);flex:none}
+.bico-lg{width:60px;height:60px;border-radius:14px;object-fit:contain;background:#fff;padding:5px;border:1px solid var(--line);flex:none}
 .bcard .bhd{display:flex;align-items:center;gap:12px;margin-bottom:14px}
 .bcard .bname{font-family:'Fraunces',serif;font-weight:600;font-size:21px}
 .bcard .bn{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--mut)}
@@ -232,6 +234,37 @@ footer{padding:48px 0 80px;color:var(--mut);font-family:'JetBrains Mono',monospa
 .pri{font-family:'JetBrains Mono',monospace;font-size:10px;padding:3px 8px;border-radius:6px;background:#fbe9d8;color:var(--coral);font-weight:600}
 .ilink{margin-left:auto;font-family:'JetBrains Mono',monospace;font-size:11px;text-decoration:none;color:var(--teal-deep);border:1px solid var(--line);padding:5px 10px;border-radius:7px;position:relative;z-index:2}
 .ilink:hover{border-color:var(--teal)}
+.icard{cursor:pointer}
+.idrv{font-family:'JetBrains Mono',monospace;font-size:11px;text-decoration:none;color:#fff;background:var(--teal);padding:5px 10px;border-radius:7px;position:relative;z-index:2}
+.idrv:hover{background:var(--teal-deep)}
+.ihint{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--mut);margin-top:2px}
+/* modal */
+.mback{position:fixed;inset:0;z-index:50;background:rgba(10,14,30,.62);backdrop-filter:blur(3px);display:none;align-items:flex-start;justify-content:center;padding:40px 18px;overflow:auto}
+.mback.on{display:flex}
+.modal{background:var(--card);border:1px solid var(--line);border-radius:16px;max-width:960px;width:100%;padding:0;overflow:hidden;box-shadow:0 30px 80px -20px rgba(10,14,30,.6)}
+.mhead{display:flex;align-items:center;gap:12px;padding:16px 22px;border-bottom:1px solid var(--line);flex-wrap:wrap}
+.mclose{margin-left:auto;background:transparent;border:1px solid var(--line);color:var(--ink);width:32px;height:32px;border-radius:8px;cursor:pointer;font-size:16px;position:relative;z-index:2}
+.mclose:hover{background:var(--paper-2)}
+.mbody{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:0}
+@media(max-width:760px){.mbody{grid-template-columns:1fr}}
+.mleft{padding:20px 22px;border-right:1px solid var(--line)}
+@media(max-width:760px){.mleft{border-right:none;border-bottom:1px solid var(--line)}}
+.mright{padding:20px 22px;min-width:0}
+.mframe{width:100%;border-radius:11px;border:1px solid var(--line);background:var(--paper-2);display:block}
+.mframe.ph{aspect-ratio:1/1;display:grid;place-items:center;color:var(--mut);font-family:'JetBrains Mono',monospace;font-size:12px}
+.mmets{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:14px}
+.mmet{background:var(--paper-2);border-radius:9px;padding:9px 11px}
+.mmet .v{font-family:'Space Grotesk';font-weight:700;font-size:16px;color:var(--teal-deep)}
+.mmet .l{font-family:'JetBrains Mono',monospace;font-size:9.5px;color:var(--mut);text-transform:uppercase;letter-spacing:.07em;margin-top:1px}
+.mlinks{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+.mlinks a{font-family:'JetBrains Mono',monospace;font-size:12px;text-decoration:none;color:#fff;padding:8px 13px;border-radius:8px}
+.mlinks a.drv{background:var(--teal)}.mlinks a.fb{background:#3a5a98}
+.msec{font-family:'JetBrains Mono',monospace;font-size:10.5px;text-transform:uppercase;letter-spacing:.1em;color:var(--coral);margin:0 0 7px}
+.mhook{font-family:'Fraunces',serif;font-weight:600;font-size:20px;line-height:1.25;margin-bottom:12px}
+.mreframe{font-size:13.5px;line-height:1.55;margin-bottom:14px}
+.mscript{font-size:12.5px;line-height:1.6;color:var(--ink);white-space:pre-wrap;background:var(--paper-2);border-radius:9px;padding:12px 14px;margin-bottom:14px}
+.mtrans{font-size:12.5px;line-height:1.7;color:var(--mut);max-height:260px;overflow:auto;border-left:2px solid var(--line);padding-left:12px}
+.msrchook{font-size:13px;color:var(--ink);margin-bottom:6px}
 </style></head><body><script>try{document.documentElement.setAttribute("data-theme",localStorage.getItem("theme")||"light")}catch(e){}</script><div class="field" aria-hidden="true"><div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div></div><div class="progress" id="prog"></div><div class="cursor-ring" id="cring"></div><div class="cursor-dot" id="cdot"></div><nav class="topnav"><div class="navwrap"><a class="navbrand" href="index.html"><span class="navlogo">वि</span><span class="bt">Competitor <span class="gn">Intel</span></span></a><div class="navlinks"><a class="on" href="index.html">Overview</a><a class="" href="index.html#brands">Brands</a><a class="" href="ideas.html">Bachatt Relevant Reels</a><a class="navcta " href="explore.html">Explore all 3,372 &rarr;</a><a class="backlink" href="https://sameerkashayapiitk.github.io/bachatt-top150-creative-intelligence/" title="Bachatt creative intelligence">← Bachatt site</a><button class="navtoggle" id="themeToggle" aria-label="toggle dark mode" title="dark mode">🌙</button></div></div></nav><div class="wrap"><header style="padding:48px 0 10px">
 <div class="brandrow"><div class="logo">वि</div><div><div class="brandname">Bachatt · Competitor Intel</div><div class="brandtag">9 fintech advertisers · reverse-engineered for Bachatt</div></div></div>
 <div class="eyebrow">Competitor creative intelligence</div>
@@ -243,56 +276,56 @@ footer{padding:48px 0 80px;color:var(--mut);font-family:'JetBrains Mono',monospa
 <span class="chip"><b>3,135</b> video ads</span>
 <a class="chip" href="ideas.html"><b>591</b> Bachatt reel ideas →</a>
 </div></header><div class="rule"></div><section class="track" id="brands"><div class="trackhead"><div class="tracknum">01</div><div><div class="tracktitle">The scoreboard</div><p class="tracksub">Each competitor's ad-library footprint at a glance. <b>Click a brand</b> for the full breakdown.</p></div></div><div class="brandgrid"><div class="bcard"><a class="cstretch" href="brand.html?b=seekho" aria-label="Seekho breakdown"></a>
-<div class="bhd"><div class="bdot" style="background:#d4732a">S</div><div><div class="bname">Seekho</div><div class="bn">994 creatives · 994 video</div></div></div>
+<div class="bhd"><img class="bico" src="icons/seekho.png" alt="Seekho" onerror="this.outerHTML='&lt;div class=bdot style=background:#d4732a&gt;S&lt;/div&gt;'"><div><div class="bname">Seekho</div><div class="bn">994 creatives · 994 video</div></div></div>
 <div class="bbody"><div class="bstats">
 <div class="bstat"><div class="v">Micro-Drama</div><div class="l">top format</div></div>
 <div class="bstat"><div class="v">24%</div><div class="l">AI-generated</div></div>
 <div class="bstat"><div class="v">—</div><div class="l">creator collab</div></div>
 <div class="bstat"><div class="v">Hindi</div><div class="l">top language</div></div>
 </div><div class="bmix"><span style="width:25.4%;background:#e2603f" title="Micro-Drama 252"></span><span style="width:24.1%;background:#db2777" title="AI-Generated 240"></span><span style="width:15.5%;background:#5b6489" title="Talking-Head 154"></span><span style="width:9.3%;background:#5b6489" title="Presenter-Screen 92"></span><span style="width:8.7%;background:#3b3ac9" title="Skit 86"></span><span style="width:6.3%;background:#5b6489" title="Motion-Graphics 63"></span><span style="width:3.1%;background:#5b6489" title="Screen-Demo 31"></span><span style="width:2.9%;background:#5b6489" title="Street/Vox-pop 29"></span><span style="width:2.1%;background:#5b6489" title="Listicle 21"></span><span style="width:1.9%;background:#5b6489" title="Other 19"></span><span style="width:0.7%;background:#5b6489" title="Podcast 7"></span></div><div class="btags"><span class="btag">Getting a loan with a low CIBIL score</span><span class="btag">Booking Tatkal train tickets yourself instead of paying agents</span></div></div></div><div class="bcard"><a class="cstretch" href="brand.html?b=jar" aria-label="Jar breakdown"></a>
-<div class="bhd"><div class="bdot" style="background:#7c3aed">J</div><div><div class="bname">Jar</div><div class="bn">802 creatives · 802 video</div></div></div>
+<div class="bhd"><img class="bico" src="icons/jar.png" alt="Jar" onerror="this.outerHTML='&lt;div class=bdot style=background:#7c3aed&gt;J&lt;/div&gt;'"><div><div class="bname">Jar</div><div class="bn">802 creatives · 802 video</div></div></div>
 <div class="bbody"><div class="bstats">
 <div class="bstat"><div class="v">Skit</div><div class="l">top format</div></div>
 <div class="bstat"><div class="v">0%</div><div class="l">AI-generated</div></div>
 <div class="bstat"><div class="v">34%</div><div class="l">creator collab</div></div>
 <div class="bstat"><div class="v">Hindi</div><div class="l">top language</div></div>
 </div><div class="bmix"><span style="width:66.6%;background:#3b3ac9" title="Skit 534"></span><span style="width:12.1%;background:#0d9f6e" title="Production-Led 97"></span><span style="width:12.0%;background:#e0a526" title="Non-Skit 96"></span><span style="width:5.2%;background:#e2603f" title="Micro-Drama 42"></span><span style="width:4.1%;background:#7c3aed" title="Non-Skit (multi-turn) 33"></span></div><div class="btags"><span class="btag">Daily small savings in 24K gold; ₹20/day math</span><span class="btag">Kids hoarding cash → redirect to gold savings</span></div></div></div><div class="bcard"><a class="cstretch" href="brand.html?b=good-score" aria-label="Good Score breakdown"></a>
-<div class="bhd"><div class="bdot" style="background:#0ea5a0">G</div><div><div class="bname">Good Score</div><div class="bn">744 creatives · 744 video</div></div></div>
+<div class="bhd"><img class="bico" src="icons/good-score.png" alt="Good Score" onerror="this.outerHTML='&lt;div class=bdot style=background:#0ea5a0&gt;G&lt;/div&gt;'"><div><div class="bname">Good Score</div><div class="bn">744 creatives · 744 video</div></div></div>
 <div class="bbody"><div class="bstats">
 <div class="bstat"><div class="v">AI-Generated</div><div class="l">top format</div></div>
 <div class="bstat"><div class="v">32%</div><div class="l">AI-generated</div></div>
 <div class="bstat"><div class="v">1%</div><div class="l">creator collab</div></div>
 <div class="bstat"><div class="v">Hindi</div><div class="l">top language</div></div>
 </div><div class="bmix"><span style="width:31.9%;background:#db2777" title="AI-Generated 237"></span><span style="width:23.8%;background:#e0a526" title="Non-Skit 177"></span><span style="width:17.3%;background:#0d9f6e" title="Production-Led 129"></span><span style="width:10.9%;background:#3b3ac9" title="Skit 81"></span><span style="width:8.9%;background:#e2603f" title="Micro-Drama 66"></span><span style="width:7.3%;background:#7c3aed" title="Non-Skit (multi-turn) 54"></span></div><div class="btags"><span class="btag">CIBIL score improvement to 750+ via ₹99 expert consultation</span><span class="btag">Credit red flags vs green flags; GoodScore as the green flag</span></div></div></div><div class="bcard"><a class="cstretch" href="brand.html?b=oolka" aria-label="Oolka breakdown"></a>
-<div class="bhd"><div class="bdot" style="background:#e2603f">O</div><div><div class="bname">Oolka</div><div class="bn">248 creatives · 248 video</div></div></div>
+<div class="bhd"><img class="bico" src="icons/oolka.png" alt="Oolka" onerror="this.outerHTML='&lt;div class=bdot style=background:#e2603f&gt;O&lt;/div&gt;'"><div><div class="bname">Oolka</div><div class="bn">248 creatives · 248 video</div></div></div>
 <div class="bbody"><div class="bstats">
 <div class="bstat"><div class="v">Skit</div><div class="l">top format</div></div>
 <div class="bstat"><div class="v">22%</div><div class="l">AI-generated</div></div>
 <div class="bstat"><div class="v">56%</div><div class="l">creator collab</div></div>
 <div class="bstat"><div class="v">Hindi</div><div class="l">top language</div></div>
 </div><div class="bmix"><span style="width:31.5%;background:#3b3ac9" title="Skit 78"></span><span style="width:21.4%;background:#e0a526" title="Non-Skit 53"></span><span style="width:21.4%;background:#db2777" title="AI-Generated 53"></span><span style="width:20.2%;background:#0d9f6e" title="Production-Led 50"></span><span style="width:3.6%;background:#7c3aed" title="Non-Skit (multi-turn) 9"></span><span style="width:2.0%;background:#e2603f" title="Micro-Drama 5"></span></div><div class="btags"><span class="btag">EMI paid but CIBIL still shows due -&gt; Oolka AI mails bank/bureau to clear it</span><span class="btag">Honest man&#x27;s loan rejected because a brother&#x27;s defaulted guarantee scarred his CIBIL → Oolka surfaces &amp; disputes it</span></div></div></div><div class="bcard"><a class="cstretch" href="brand.html?b=scripbox" aria-label="Scripbox breakdown"></a>
-<div class="bhd"><div class="bdot" style="background:#2563eb">S</div><div><div class="bname">Scripbox</div><div class="bn">246 creatives · 9 video</div></div></div>
+<div class="bhd"><img class="bico" src="icons/scripbox.png" alt="Scripbox" onerror="this.outerHTML='&lt;div class=bdot style=background:#2563eb&gt;S&lt;/div&gt;'"><div><div class="bname">Scripbox</div><div class="bn">246 creatives · 9 video</div></div></div>
 <div class="bbody"><div class="bstats">
 <div class="bstat"><div class="v">Production-Led</div><div class="l">top format</div></div>
 <div class="bstat"><div class="v">0%</div><div class="l">AI-generated</div></div>
 <div class="bstat"><div class="v">0%</div><div class="l">creator collab</div></div>
 <div class="bstat"><div class="v">—</div><div class="l">top language</div></div>
 </div><div class="bmix"><span style="width:100.0%;background:#0d9f6e" title="Production-Led 246"></span></div><div class="btags"><span class="btag">Wealth as a weekend hobby (neglect)</span><span class="btag">Wealth deserves career-grade expertise</span></div></div></div><div class="bcard"><a class="cstretch" href="brand.html?b=jio-finance" aria-label="Jio Finance breakdown"></a>
-<div class="bhd"><div class="bdot" style="background:#1d4ed8">J</div><div><div class="bname">Jio Finance</div><div class="bn">186 creatives · 186 video</div></div></div>
+<div class="bhd"><img class="bico" src="icons/jio-finance.png" alt="Jio Finance" onerror="this.outerHTML='&lt;div class=bdot style=background:#1d4ed8&gt;J&lt;/div&gt;'"><div><div class="bname">Jio Finance</div><div class="bn">186 creatives · 186 video</div></div></div>
 <div class="bbody"><div class="bstats">
 <div class="bstat"><div class="v">Production-Led</div><div class="l">top format</div></div>
 <div class="bstat"><div class="v">0%</div><div class="l">AI-generated</div></div>
 <div class="bstat"><div class="v">0%</div><div class="l">creator collab</div></div>
 <div class="bstat"><div class="v">English</div><div class="l">top language</div></div>
 </div><div class="bmix"><span style="width:82.8%;background:#0d9f6e" title="Production-Led 154"></span><span style="width:10.2%;background:#e2603f" title="Micro-Drama 19"></span><span style="width:6.5%;background:#e0a526" title="Non-Skit 12"></span><span style="width:0.5%;background:#db2777" title="AI-Generated 1"></span></div><div class="btags"><span class="btag">Digital gold investment earns JioPoints</span><span class="btag">Digital gold / JioGold SIP from Rs.10</span></div></div></div><div class="bcard"><a class="cstretch" href="brand.html?b=stable-money" aria-label="Stable Money breakdown"></a>
-<div class="bhd"><div class="bdot" style="background:#0d9f6e">S</div><div><div class="bname">Stable Money</div><div class="bn">123 creatives · 123 video</div></div></div>
+<div class="bhd"><img class="bico" src="icons/stable-money.png" alt="Stable Money" onerror="this.outerHTML='&lt;div class=bdot style=background:#0d9f6e&gt;S&lt;/div&gt;'"><div><div class="bname">Stable Money</div><div class="bn">123 creatives · 123 video</div></div></div>
 <div class="bbody"><div class="bstats">
 <div class="bstat"><div class="v">Non-Skit</div><div class="l">top format</div></div>
 <div class="bstat"><div class="v">4%</div><div class="l">AI-generated</div></div>
 <div class="bstat"><div class="v">3%</div><div class="l">creator collab</div></div>
 <div class="bstat"><div class="v">English</div><div class="l">top language</div></div>
 </div><div class="bmix"><span style="width:61.0%;background:#e0a526" title="Non-Skit 75"></span><span style="width:18.7%;background:#0d9f6e" title="Production-Led 23"></span><span style="width:7.3%;background:#3b3ac9" title="Skit 9"></span><span style="width:6.5%;background:#7c3aed" title="Non-Skit (multi-turn) 8"></span><span style="width:4.9%;background:#e2603f" title="Micro-Drama 6"></span><span style="width:1.6%;background:#db2777" title="AI-Generated 2"></span></div><div class="btags"><span class="btag">FD-backed credit card with free airport lounge access and cashback</span><span class="btag">Choose safe FDs over volatile share market</span></div></div></div><div class="bcard"><a class="cstretch" href="brand.html?b=slice" aria-label="Slice breakdown"></a>
-<div class="bhd"><div class="bdot" style="background:#7c5cff">S</div><div><div class="bname">Slice</div><div class="bn">29 creatives · 29 video</div></div></div>
+<div class="bhd"><img class="bico" src="icons/slice.png" alt="Slice" onerror="this.outerHTML='&lt;div class=bdot style=background:#7c5cff&gt;S&lt;/div&gt;'"><div><div class="bname">Slice</div><div class="bn">29 creatives · 29 video</div></div></div>
 <div class="bbody"><div class="bstats">
 <div class="bstat"><div class="v">Non-Skit</div><div class="l">top format</div></div>
 <div class="bstat"><div class="v">0%</div><div class="l">AI-generated</div></div>
